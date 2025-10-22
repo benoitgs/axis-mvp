@@ -23,6 +23,26 @@
     <script type="text/babel">
       const { useState, useEffect } = React;
 
+
+<script type="text/babel">
+  let deferredPrompt = null;
+
+  // Capture l’évènement d’installation PWA
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;         // on stocke le prompt
+    const btn = document.getElementById('install-btn');
+    if (btn) btn.style.display = 'inline-flex';
+  });
+
+  // Masque le bouton après installation
+  window.addEventListener('appinstalled', () => {
+    const btn = document.getElementById('install-btn');
+    if (btn) btn.style.display = 'none';
+  });
+</script>
+
+
       function App() {
         const [message, setMessage] = useState("");
         const [intent, setIntent] = useState("");
