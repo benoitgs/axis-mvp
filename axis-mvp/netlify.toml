@@ -1,0 +1,6 @@
+[functions]
+  node_bundler = "esbuild"
+[[redirects]]
+  from = "/api/suggest"
+  to = "/.netlify/functions/suggest"
+  status = 200
