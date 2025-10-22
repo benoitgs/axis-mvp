@@ -32,12 +32,12 @@
 
         async function onPropose() {
           try {
-const r = await fetch("/.netlify/functions/suggest", {
+const r = await fetch("/api/suggest", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ message, intent, tone })
+});
 
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify({ message, intent, tone })
-            });
             if (r.ok) {
               const data = await r.json();
               setSuggestion(data.suggestion || "Erreur ou clé OpenAI manquante");
