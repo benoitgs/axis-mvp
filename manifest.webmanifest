@@ -1,0 +1,17 @@
+{
+"name": "AXIS — Assistant de Coparentalité",
+"short_name": "AXIS",
+"start_url": "/",
+"scope": "/",
+"display": "standalone",
+"background_color": "#0B1220",
+"theme_color": "#0B1220",
+"icons": [
+{
+"src": "https://raw.githubusercontent.com/tailwindlabs/heroicons/master/src/20/solid/hand-thumb-up.svg",
+"sizes": "512x512",
+"type": "image/svg+xml",
+"purpose": "any maskable"
+}
+]
+}
